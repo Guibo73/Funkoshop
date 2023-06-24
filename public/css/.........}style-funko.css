@@ -1,0 +1,185 @@
+/* estilos generales*/
+.texto-claro {
+    color: white;
+}
+
+.boton-claro {
+    border: 1px solid;
+    border-radius: 50px;
+    height: 47px;
+    width: 211px;
+}
+
+.boton-oscuro {
+    border: 1px solid;
+    border-radius: 50px;
+    height: 65px;
+    width: 291.81px;
+    background: #30343F;
+    color: white;
+    margin-left: 20px;
+}
+
+/*Barra de navegacion*/
+.navbar {
+    padding: 2rem;
+    height: 140px;
+    /*width: 1440px;*/
+}
+
+.navbar-collapse {
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* banner*/
+.banner {
+    background-image: url(images/funkos-banner1.png);
+    background-repeat: no-repeat;
+    width: 1265px;
+    height: 400px;
+}
+
+.banner p {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+/* contenido*/
+.align-contenido {
+    padding-top: 50px;
+    text-align: left;
+}
+
+.banner button {
+    margin-top: 100px;
+}
+
+/*productos*/
+.productos {
+    padding-top: 100px;
+}
+
+.productos .container {
+    padding-top: 50px;
+}
+
+.linea-separador {
+    width: 645px;
+    height: 0px;
+    margin-left: 20px;
+    top: 949.5px;
+    background: #FF3333;
+    border: 3px solid #FF3333;
+}
+
+.descripcion-producto {
+    font-family: 'Raleway', sans-serif;
+    font-size: 46px;
+    line-height: 54px;
+    text-transform: uppercase;
+    color: #111111;
+    margin-left: 20px;
+    padding-top: 120px;
+}
+
+.frase-producto {
+    width: 458px;
+    height: 56px;
+    margin-left: 20px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #4F4F4F;
+}
+
+/*ultimos lanzamientos*/
+
+.ultimos-lanzamientos h2 {
+    width: 547.11px;
+    height: 54px;
+    margin-left: 35px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 54px;
+    text-transform: uppercase;
+    color: #111111;
+}
+
+.ultimos-lanzamientos img {
+    width: 359.97px;
+    height: 352px;
+}
+
+.linea-producto {
+    width: 82.83px;
+    height: 17px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10.5px;
+    line-height: 17px;
+    color: #333333;
+}
+
+.descripcion-producto-ultimoslanzamientos {
+    width: 277.13px;
+    height: 22px;
+    left: 124.32px;
+    top: 2921px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #111111;
+    text-transform: uppercase;
+}
+
+.precio-ultimoslanzamientos {
+    width: 88.97px;
+    height: 19px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+}
+
+.promocion-ultimoslanzamientos {
+    width: 141.12px;
+    height: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #1D84B5;
+}
+
+.figura-nuevo {
+    position: relative;
+}
+
+.figura-nuevo span {
+    position: absolute;
+    right: 0px;
+    width: 51.13px;
+    height: 17px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    background-color: rgba(255, 51, 51, 1);
+}
