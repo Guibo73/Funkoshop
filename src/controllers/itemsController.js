@@ -1,23 +1,37 @@
 //const data = require('../data/data');
-const itemsServices = require('../models/itemsServices');
+const itemsServices = require('../services/itemsServices');
 const path = require('path');
 
-const getItems = async (req, res) => {
-    const result = await itemsServices.getAllItems;
+
+async function itemsView(req, res) {
+    const id = req.params.id;
+    const item = await itemsServices.getItemByParams(id);
+    //const data = {...item};
+    console.log(item);
+    res.render('shop/items', {
+        view: {
+            tittle: "Items | Funkoshop"
+        },
+        item
+    });
+}
+
+/*const getItems = async (req, res) => {
+    const result = await itemsServices.getAllItems();
     res.send(result);
 }
 
 async function getItem(req, res) {
-    const result = itemsServices.getItemByParams(req.params.id);
+    const result = await itemsServices.getItemByParams(req.params.id);
     res.send(result);
-}
+}*/
 
 async function deleteItem(req, res) {
-    const result = itemsServices.deleteByParams(req.params.id);
+    const result = await itemsServices.deleteByParams(req.params.id);
     res.send(result);
 }
 
-module.exports = { getItems, getItem, deleteItem };
+module.exports = { itemsView, deleteItem };
 
 /*function getItems(req, res) {
     const name = req.query.name;

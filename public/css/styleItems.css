@@ -1,4 +1,4 @@
-.container {
+.containerItems {
     width: 1440px;
     display: flex;
     flex-direction: column;
@@ -234,7 +234,7 @@
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.17);
     border-radius: 4px;
     top: 50%;
-    background-image: url('multimedia_funkoshop/icons/Stroke2.svg');
+    background-image: url('../img/icons/Stroke2.svg');
     background-repeat: no-repeat;
     background-position: center;
     transform: rotate(180deg);
@@ -249,7 +249,7 @@
     border-radius: 4px;
     top: 50%;
     right: 0;
-    background-image: url('multimedia_funkoshop/icons/Stroke2.svg');
+    background-image: url('../img/icons/Stroke2.svg');
     background-repeat: no-repeat;
     background-position: center;
 }

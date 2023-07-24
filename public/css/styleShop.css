@@ -1,11 +1,11 @@
-.container {
+.containerShop {
     display: flex;
     width: 1440px;
 }
 
 /* formuario */
 
-form {
+#formShop {
     margin-top: var(--spacing-68);
     width: 24.304rem;
     height: 49.393rem;

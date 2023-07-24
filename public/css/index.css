@@ -30,3 +30,12 @@
 @import url('./pages/register.css');
 @import url('./pages/create.css');
 @import url('./pages/edit.css');
+
+/* ESTILOS TEMPORALES */
+
+@import url('style.css');
+@import url('styleHome.css');
+@import url('styleItems.css');
+@import url('styleShop.css');
+@import url('admin.css');
+@import url('adminLogin.css');

@@ -8,12 +8,12 @@ async function getAllItems() {
 
 async function getItemByParams(params) {
     const result = await itemsModels.getOne({ idproduct: params });
-    console.log(`Item_id ingresado: ${id}`);
+    console.log(`Item_id ingresado: ${params}`);
     return result;
 }
 async function deleteByParams(params) {
     const result = await itemsModels.deleteOne({ idproduct: params });
-    console.log(`Se borró el Item_ID: ${id}`);
+    console.log(`Se borró el Item_ID: ${params}`);
     return result;
 }
 
