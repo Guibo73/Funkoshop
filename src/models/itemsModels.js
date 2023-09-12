@@ -12,7 +12,7 @@ const getAll = async () => {
 };
 
 const getOne = async (params) => {
-    const [rows, fields] = await conn.query('SELECT * FROM product WHERE ?;', params);
+    const [rows, fields] = await conn.query('SELECT product.*, licence.licence_name FROM product  INNER JOIN licence ON product.licence_id = licence.licence_id WHERE ?;', params);
     return rows;
     //return {rows};
 };

@@ -1,81 +1,72 @@
-.container-admin1 {
-    margin-top: var(--spacing-36);
+.search-container {
     display: flex;
-    margin-left: 110px
+    align-items: center;
+    margin-top: var(--spacing-36);
 }
 
-.input-admin {
+.search-input {
     width: 529.76px;
     height: 44.28px;
-    border: 2px solid #30343F;
+    border: 2px solid var(--dark-solid);
     border-radius: 6px;
     margin-left: var(--spacing-28);
 }
 
-.input-admin::placeholder {
+.search-input::placeholder {
     padding-left: 23.87px;
     font-family: var(--base-font);
-    font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: var(--font-xsmall);
     line-height: 2.4rem;
-    color: #B9B9B9;
+    color: var(--dark-300);
 }
 
-.container-admin2 {
-    margin-top: 3.75rem;
-    margin-left: 110px;
-    width: 1120px;
-    margin-bottom: var(--spacing-36);
+.product-main {
+    display: flex;
+    flex-direction: column;
+
 }
 
-.encabezado {
+.product-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: var(--spacing-36);
 }
 
-.agregar {
+.product-list__tittle {
+    font: var(--alternative-font);
+    font-size: var(--font-jumbo);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.product-add {
     display: flex;
     align-items: center;
-    gap: 2.85rem;
+    gap: var(--spacing-8);
 }
 
-.agregar p {
-    font-family: var(--base-font);
-    font-style: normal;
+.product-add__tittle {
+    font: var(--base-font);
+    font-size: var(--font-large);
     font-weight: 700;
-    font-size: 2.4em;
-    line-height: 2.9rem;
-    text-align: right;
-    color: #1F1F1F;
 }
 
-
-
-h1 {
-    font-family: var(--alternative-font);
-    font-style: normal;
-    font-weight: 700;
-    font-size: 4.2em;
-    line-height: 49px;
-    color: #1F1F1F;
-}
-
-.grid-admin {
+.product-admin {
     display: grid;
     grid-template-columns: 5% 15% 40% 30% 5% 5%;
     grid-template-rows: 14;
-    margin-top: 34px;
+    padding-top: var(--spacing-36);
 }
 
 .titulos {
     font-family: var(--base-font);
     font-style: normal;
     font-weight: 700;
-    font-size: 2.4em;
+    font-size: var(--font-large);
     line-height: 2.9rem;
-    color: #1F1F1F;
+    color: var(--dark-solid);
     margin-bottom: 2.295rem;
 }
 

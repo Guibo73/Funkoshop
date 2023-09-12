@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const methodOverride = require('method-override');
 require('dotenv').config();
 
 /* Puerto de la aplicación */
@@ -24,9 +25,12 @@ app.set('views', './src/views');
 app.use(express.urlencoded());
 app.use(express.json());
 
+/* Override para habilitar metodos PUT y DELETE */
+app.use(methodOverride('method'));
+
 app.use('/', mainRoutes);
 app.use('/', adminRoutes);
-app.use('/', itemsRoutes);
+app.use('/', itemsRoutes); 
 app.use('/', shopRoutes);
 
 app.use(errorsHandler[404]);
