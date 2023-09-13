@@ -3,7 +3,7 @@
 <body>
     <section class="containerItems">
 
-        <% item.forEach(product => { %>
+        <% items.forEach(product => { %>
         <div class="box1">
             <div class="box1-imagen">
                 <img src='..\img\<%= product.image_front%>' alt="Figura coleccionable">
@@ -13,7 +13,7 @@
                 <h2><%= product.licence_name %></h2>
                 <h3><%= product.product_name %></h3>
                 <p><%= product.product_description %></p>
-                <p id="price"><%= product.price %></p>
+                <p id="price">$<%= product.price %></p>
                 <form action="" method="">
                     <button>-</button>
                     <input type="number">
@@ -31,15 +31,17 @@
             <div class="stroke2d"></div>
             <div class="grid-container">
 
+                <% prodRel.forEach(otherData => { %>
                 <div class="card">
-                    <img src="..\img\star-wars\trooper-1.webp" class="card-imagen" alt="Trooper">
-                    <p id="marca">Star Wars</p>
-                    <p id="modelo">STORMTROOPER LIGHTSABER</p>
-                    <p id="precio">$ 1799,99.-</p>
+                    <img src='..\img\<%= otherData.image_front%>' class="card-imagen" alt="">
+                    <p id="marca"><%= otherData.licence_name %></p>
+                    <p id="modelo"><%= otherData.product_name %></p>
+                    <p id="precio">$<%= otherData.price %></p>
                     <p id="cuotas">3 CUOTAS SIN INTERÉS</p>
                 </div>
+                <% });%>
 
-                <div class="card">
+               <!--  <div class="card">
                     <img src="..\img\pokemon\pidgeotto-1.webp" class="card-imagen" alt="Pidgeotto">
                     <p id="marca">POKEMON</p>
                     <p id="modelo">PIDGEOTTO</p>
@@ -53,7 +55,7 @@
                     <p id="modelo">LUNA LOVEGOOD LION MASK</p>
                     <p id="precio">$ 2434,99.-</p>
                     <p id="cuotas">3 CUOTAS SIN INTERÉS</p>
-                </div>
+                </div> -->
 
             </div>
         </div>

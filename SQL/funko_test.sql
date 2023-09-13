@@ -71,6 +71,7 @@ CREATE TABLE `product` (
 
 INSERT INTO `product` (`product_id`, `product_name`, `product_description`, `price`, `stock`, `discount`, `sku`, `dues`, `image_front`, `image_back`, `create_time`, `licence_id`, `category_id`) VALUES
 (1, 'Baby Yoda Blueball', 'Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.', '1799.99', 8, 10, 'STW001001', 3, '/star-wars/baby-yoda-1.webp', '/star-wars/baby-yoda-box.webp', '2023-06-27 23:33:21', 2, 1),
+(2, 'Bobbafeth', 'Figura coleccionable de Baby Yoda (Grogu) - The Mandalorian Saga, edición limitada.', '2899.99', 8, 10, 'STW001002', 3, '/star-wars/bobbafeth-1.webp', '/star-wars/bobbafeth-box.webp', '2023-06-27 23:33:21', 2, 1),
 (3, 'Luke Skylwalker & Grogu', 'Figura coleccionable de Luke Skylwalker & Grogu - The Mandalorian Saga.', '2399.99', 8, 10, 'STW001003', 3, '/star-wars/luke-1.webp', '/star-wars/luke-box.webp', '2023-06-27 23:33:21', 2, 1),
 (4, 'Stormtrooper Lightsaber', 'Figura coleccionable de Stormtrooper Lightsaber - Star Wars Saga.', '1799.99', 8, 10, 'STW001004', 3, '/star-wars/trooper-1.webp', '/star-wars/trooper-box.webp', '2023-06-27 23:33:21', 2, 1),
 (5, 'Charmander Smiley', 'Figura coleccionable de Charmander - Pokemon Saga.', '1799.99', 8, 10, 'PKM001001', 3, '/pokemon/charmander-1.webp', '/pokemon/charmander-box.webp', '2023-06-27 23:33:21', 1, 1),

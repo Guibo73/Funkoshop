@@ -12,9 +12,24 @@ const getAll = async () => {
 };
 
 const getOne = async (params) => {
-    const [rows, fields] = await conn.query('SELECT product.*, licence.licence_name FROM product  INNER JOIN licence ON product.licence_id = licence.licence_id WHERE ?;', params);
-    return rows;
-    //return {rows};
+    // Ejecuta la consulta SQL para obtener productos y la información relacionada segun el N° de params ingresado.
+    const [productRows, productFields] = await conn.query('SELECT product.*, licence.licence_name FROM product INNER JOIN licence ON product.licence_id = licence.licence_id WHERE ?;', params);
+   
+    // Accede a la propiedad category_id solo si productRows[0] existe.
+    const licenceId = productRows[0]?.licence_id;
+
+    // Ejecuta una segunda consulta SQL ingresando la información de la query anterior.
+    const [prodRelRows, prodRelFields] = await conn.query('SELECT product.*, licence.licence_name FROM product INNER JOIN licence ON product.licence_id = licence.licence_id WHERE product.licence_id = ? AND product.product_id <> ?;', [licenceId, params.product_id]);
+
+    // Combina los resultados de ambas consultas en una estructura de datos.
+    const result = {
+    products: productRows,
+    otherData: prodRelRows
+};
+
+    // Devuelve la estructura de datos que contiene los resultados de ambas consultas.
+    return result;
+    
 };
 
 const deleteOne = async (params) => {

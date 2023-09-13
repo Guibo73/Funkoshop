@@ -10,10 +10,11 @@ async function itemsView(req, res) {
     console.log(item);
     res.render('shop/items', {
         view: {
-            tittle: "Items | Funkoshop"
+            title: "Items | Funkoshop"
         },
-        item
-    });
+        items : item.products,
+        prodRel: item.otherData
+        });
 }
 
 /*const getItems = async (req, res) => {

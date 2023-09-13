@@ -15,7 +15,7 @@ async function shopView(req, res) {
     console.log(items);
     res.render('shop/shop', {
         view: {
-            tittle: "Shop | Funkoshop"
+            title: "Shop | Funkoshop"
         },
         items
     });
