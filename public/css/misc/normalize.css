@@ -84,7 +84,8 @@ img {
     width: 100%;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+input[type="text"]::placeholder{
+    color: var(--dark-300);
+    font-family: var(--base-font);
+    font-weight: 500;
 }
