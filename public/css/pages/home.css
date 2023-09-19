@@ -1,0 +1,216 @@
+/* HEADER */
+
+header {
+  background: var(--dark-bg-solid);
+  padding: var(--spacing-36);
+  color: var(--light-font-solid);
+  font-family: var(--alternative-font);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo {
+  max-width: 300px;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-20);
+}
+
+.navbar__link {
+  font-size: var(--font-medium);
+  padding: var(--spacing-8) var(--spacing-16);
+  display: inline-block;
+  transition: background .3s ease-in-out;
+  position: relative;
+}
+
+.navbar__link:hover {
+  background-color: var(--primary-900);
+}
+
+.with-icon {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8)
+}
+
+.with-submenu:hover .submenu {
+  display: block;
+}
+
+.submenu {
+  display: none;
+  width: 300px;
+  position: absolute;
+  background-color: var(--dark-bg-solid);
+  z-index: 1;
+}
+
+.submenu__link {
+  display: block;
+  padding: var(--spacing-8) var(--spacing-16);
+  font-size: var(--font-medium);
+  transition: background .3s ease-in-out;
+}
+
+.submenu__link:hover {
+  background-color: var(--primary-900);
+}
+
+/* HERO */
+
+.hero {
+  background-image: url(../../img/funkos-banner.webp);
+  opacity: 0.8;
+  padding: var(--spacing-128) var(--spacing-36);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-20);
+  align-items: start;
+  /*indica a los elementos hijos que tomen el ancho del elemento. En caso de utilizar align-items: strech tomarian todo el ancho del contenedor padre*/
+}
+
+.hero__tittle {
+  font-family: var(--alternative-font);
+  font-size: var(--font-jumbo);
+  color: var(--light-font-solid);
+}
+
+.hero__text {
+  font-family: var(--alternative-font);
+  font-size: var(--font-medium);
+  color: var(--light-font-solid);
+}
+
+.hero__link {
+  display: inline-block;
+  font-size: var(--font-medium);
+  background-color: var(--light-bg-solid);
+  padding: var(--spacing-12) var(--spacing-68);
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all .3s ease-in-out;
+}
+
+.hero__link:hover {
+  background-color: var(--primary-900);
+  color: var(--light-font-solid);
+}
+
+/* COLLECTION */
+
+.main-container {
+  padding: var(--spacing-36);
+}
+
+.collection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.collection__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-24);
+  align-items: start;
+}
+
+.collection:nth-child(2) .collection__cover {
+  order: -1;
+}
+
+.collection__tittle {
+  font-family: var(--alternative-font);
+  font-size: var(--font-display);
+  font-weight: 500;
+}
+
+.collection__text {
+  font-family: var(--alternative-font);
+  font-family: var(--font-large);
+  font-weight: 300;
+  border-bottom: 2px solid var(--primary-solid);
+  padding-bottom: var(--spacing-20);
+}
+
+.collection__link {
+  display: inline-block;
+  font-size: var(--font-medium);
+  background-color: var(--dark-bg-solid);
+  color: var(--light-font-solid);
+  padding: var(--spacing-16) var(--spacing-36);
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all .3s ease-in-out;
+}
+
+.collection__link:hover {
+  background-color: var(--primary-900);
+  color: var(--light-font-solid);
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--dark-bg-solid);
+  padding: var(--spacing-68);
+}
+
+.footer__copy {
+  margin-top: var(--spacing-36);
+  text-align: center;
+}
+
+/* animations */
+@keyframes fade {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+/* estilos generales */
+.boton-claro {
+  border: 0.1rem solid;
+  border-radius: 5rem;
+  height: 4.7rem;
+  width: 21.1rem;
+  background: var(--light-bg-solid);
+  color: var(--dark-solid);
+  font-family: var(--base-font);
+  font-style: normal;
+  font-weight: 50rem;
+  font-size: var(--font-medium);
+  line-height: 2.4rem;
+}
+
+.boton-oscuro {
+  border: 0.1rem solid;
+  border-radius: 5rem;
+  height: 6.5rem;
+  width: 29.181rem;
+  background: var(--dark-bg-solid);
+  color: var(--light-font-solid);
+  font-family: var(--base-font);
+  font-style: normal;
+  font-weight: 50rem;
+  font-size: var(--font-large);
+  line-height: 2.9rem;
+}

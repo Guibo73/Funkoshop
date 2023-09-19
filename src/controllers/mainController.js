@@ -5,5 +5,9 @@ module.exports = {
                 title: "Home | Funkoshop"
             }
         });
-    }
+    }    
+/*redirectToItem : (req, res) => {
+        const itemId = req.params.id;
+        res.redirect(`/items/${itemId}`);
+    }*/
 };

@@ -1,66 +1,76 @@
 <%- include('../partials/header') %>
 
-<body>
-    <section class="containerItems">
+    <body>
+        <section class="containerItems">
 
-        <% items.forEach(product => { %>
-        <div class="box1">
-            <div class="box1-imagen">
-                <img src='..\img\<%= product.image_front%>' alt="Figura coleccionable">
-            </div>
+            <% items.forEach(product=> { %>
+                <section class="box1">
+                    <div class="box1-imagen">
+                        <img src='..\img\<%= product.image_front%>' alt="Figura coleccionable">
+                    </div>
 
-            <div class="box1-producto">
-                <h2><%= product.licence_name %></h2>
-                <h3><%= product.product_name %></h3>
-                <p><%= product.product_description %></p>
-                <p id="price">$<%= product.price %></p>
-                <form action="" method="">
-                    <button>-</button>
-                    <input type="number">
-                    <button>+</button>
-                    <input type="submit" value="Agregar al Carrito">
-                </form>
-                <p id="cuota"><a href="">Ver métodos de pago</a> - 3 CUOTAS SIN INTERES</p>
-            </div>
-        </div>
-        <% });%>
+                    <article class="item__info">
+                        <h2 class="item__licence">
+                            <%= product.licence_name %>
+                        </h2>
+                        <h3 class="item__name">
+                            <%= product.product_name %>
+                        </h3>
+                        <p class="item__description">
+                            <%= product.product_description %>
+                        </p>
+                        <p class="item__price">$<%= product.price %>
+                        </p>
+                        <div class="item__cart">
+                            <button id="subtract" class="item__quantity" type="button">-</button>
+                            <input class="item__input" type="text" name="quantity" id="quantity" placeholder="0">
+                            <button id="add" class="item__quantity" type="button">+</button>
+                            <button class="item__submit btn btn--primary btn--medium" type="submit">Agregar al
+                                carrito</button>
+                        </div>
+                        <p class="item__promo"><a href="">Ver métodos de pago</a> - 3 CUOTAS SIN INTERES</p>
+                    </article>
+                </section>
 
-        <div class="box2">
-            <h2>PRODUCTOS RELACIONADOS</h2>
-            <div class="stroke2i"></div>
-            <div class="stroke2d"></div>
-            <div class="grid-container">
-
-                <% prodRel.forEach(otherData => { %>
-                <div class="card">
-                    <img src='..\img\<%= otherData.image_front%>' class="card-imagen" alt="">
-                    <p id="marca"><%= otherData.licence_name %></p>
-                    <p id="modelo"><%= otherData.product_name %></p>
-                    <p id="precio">$<%= otherData.price %></p>
-                    <p id="cuotas">3 CUOTAS SIN INTERÉS</p>
-                </div>
                 <% });%>
+        </section>
 
-               <!--  <div class="card">
-                    <img src="..\img\pokemon\pidgeotto-1.webp" class="card-imagen" alt="Pidgeotto">
-                    <p id="marca">POKEMON</p>
-                    <p id="modelo">PIDGEOTTO</p>
-                    <p id="precio">$ 1567,99.-</p>
-                    <p id="cuotas">3 CUOTAS SIN INTERÉS</p>
-                </div>
-
-                <div class="card">
-                    <img src="..\img\harry-potter\luna-1.webp" class="card-imagen" alt="Luna">
-                    <p id="marca">HARRY POTTER</p>
-                    <p id="modelo">LUNA LOVEGOOD LION MASK</p>
-                    <p id="precio">$ 2434,99.-</p>
-                    <p id="cuotas">3 CUOTAS SIN INTERÉS</p>
-                </div> -->
-
+        <!-- Renderiza el carrusel -->
+        <section class="slider container glide"> <!--Lanzamientos-->
+            <h2 class="slider__tittle">Productos Relacionados</h2>
+            <div class="glide__track" data-glide-el="track">
+                <ul class="slider__items glide__slides"><!--<div class="card">-->
+                    <% prodRel.forEach(otherData=> { %>
+                        <li class="slider__item glide__slide">
+                            <article class="card-item">
+                                <picture class="card-item__cover">
+                                    <img src='..\img\<%= otherData.image_front%>' class="card-item__img--front" alt="">
+                                    <img src='..\img\<%= otherData.image_back%>' class="card-item__img--back" alt="">
+                                </picture>
+                                <div class="card-item__content">
+                                    <p class="card-item__licence">
+                                        <%= otherData.licence_name %>
+                                    </p>
+                                    <h4 class="card-item__name">
+                                        <%= otherData.product_name %>
+                                    </h4>
+                                    <p class="card-item__price">$<%= otherData.price %>
+                                    </p>
+                                    <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
+                                </div>
+                            </article>
+                        </li>
+                        <% }); %>
+                </ul>
             </div>
-        </div>
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow glide__arrow--left" data-glide-dir="<"><iconify-icon
+                        icon="ic:round-chevron-left"></iconify-icon></button>
+                <button class="glide__arrow glide__arrow--right" data-glide-dir=">"><iconify-icon
+                        icon="ic:round-chevron-right"></iconify-icon></button>
+            </div>
+        </section>
 
-    </section>
-</body>
+    </body>
 
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
