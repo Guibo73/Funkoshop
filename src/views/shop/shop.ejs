@@ -1,0 +1,64 @@
+<%- include('../partials/header') %>
+
+  <body>
+    <section class="containerShop">
+
+      <form id="formShop" method="">
+
+        <div>
+          <label for="buscar">BUSCAR</label> <br>
+          <input type="text" id="buscar" name="buscar" placeholder="item o categoria">
+        </div><br>
+
+        <div>
+          <label for="orden">ORDENAR POR</label>
+          <select name="orden">
+            <option value="" disabled selected>Elija una opcion</option>
+            <option value="De menor a menor">De menor a mayor</option>
+            <option value="De mayor a menor">De mayor a menor</option>
+          </select><br>
+        </div><br>
+
+        <div>
+          <label for="precio">PRECIO</label> <br>
+          <p>MIN<input type="number" id="form-precio" name="precio-min" placeholder="0">- MAX<input type="number"
+              id="form-precio" name="precio-max" placeholder="0"></p>
+        </div><br>
+
+        <div>
+          <span for="filter">FILTRAR</span><br>
+          <input type="checkbox" name="filter" id="news" value="Nuevos">
+          <label for="">NUEVOS</label><br>
+          <input type="checkbox" name="filter" value="offers">
+          <label for="">OFERTAS</label><br>
+          <input type="checkbox" name="filter" value="specialEdition">
+          <label for="">EDICION ESPECIAL</label><br>
+          <input type="checkbox" name="filter" value="Favourite">
+          <label for="">FAVORITOS</label><br>
+
+        </div><br>
+      </form>
+
+      <!-- card -->
+      <div class="grid-container">
+        <% items.forEach( item => { %>
+          <div class="card">
+            <img src="..\img\<%= item.image_front%>" class="card-imagen" alt="Figura coleccionable">
+            <p id="marca">
+              <%= item.licence %>
+            </p>
+            <p id="modelo">
+              <%= item.product_name %>
+            </p>
+            <p id="precio">
+              <%= item.price %>
+            </p>
+            <p id="cuotas">3 CUOTAS SIN INTERÉS</p>
+          </div>
+          <% });%>
+      </div>
+      
+    </section>
+  </body>
+
+  <%- include('../partials/footer') %>
